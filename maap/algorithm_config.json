@@ -1,0 +1,32 @@
+{
+      "algorithm_name": "cardamom-ogc-wrapper",
+      "algorithm_version": "main",
+      "algorithm_description": "CARDAMOM (Carbon Dioxide Flux Estimate using Data Assimilation and a Modified Bayesian Model) OGC-compliant wrapper. This application runs the CARDAMOM model for carbon flux estimation using input data files.",
+      "keywords": "cardamom, carbon, flux, model, ogc",
+      "code_repository": "https://github.com/JPL-MGHG/cardamom-ogc-wrapper.git",
+      "citation": "https://github.com/CARDAMOM-framework/CARDAMOM.git",
+      "author": "shah",
+      "contributor": "shah",
+      "license": "https://github.com/CARDAMOM-framework/CARDAMOM/blob/master/LICENSE.md",
+      "release_notes": "Initial MAAP integration",
+      "run_command": "cardamom-ogc-wrapper/maap/run.sh",
+      "build_command": "cardamom-ogc-wrapper/maap/build.sh",
+      "base_container_url": "mas.maap-project.org/root/maap-workspaces/custom_images/maap_base:v4.2.0",
+      "ram_min": 5,
+      "cores_min": 1,
+      "outdir_max": 20,
+      "inputs": [
+        {
+          "name": "input_file",
+          "doc": "Input driver file containing forcing data and model parameters for CARDAMOM.",
+          "label": "Input driver file",
+          "type": "File"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "Directory"
+        }
+      ]
+    }

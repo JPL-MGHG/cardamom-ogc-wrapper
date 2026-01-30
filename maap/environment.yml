@@ -1,0 +1,7 @@
+channels:
+  - conda-forge
+dependencies:
+  - gcc=13.2.0
+  - netcdf4
+  - hdf5
+  - python=3.10
