@@ -5,7 +5,7 @@ set -euo pipefail
 # Get current location of build script
 basedir=$( cd "$(dirname "$0")" ; pwd -P )
 
-conda env -n base update -f ${basedir}/environment.yml
+conda env update -n base -f ${basedir}/environment.yml
 git clone --depth 1 https://github.com/CARDAMOM-framework/CARDAMOM.git
 pushd CARDAMOM
 conda run --live-stream --name base "./BASH/CARDAMOM_COMPILE.sh"
