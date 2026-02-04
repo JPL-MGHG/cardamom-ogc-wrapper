@@ -28,4 +28,8 @@ RUN git clone --depth 1 https://github.com/CARDAMOM-framework/CARDAMOM.git && \
     cd CARDAMOM && \
     ./BASH/CARDAMOM_COMPILE.sh
 
+# Copy the wrapper script
+COPY run_cardamom.sh /workspace/run_cardamom.sh
+RUN chmod +x /workspace/run_cardamom.sh
+
 CMD ["/bin/bash"]

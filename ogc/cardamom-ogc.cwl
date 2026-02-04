@@ -64,7 +64,7 @@ $graph:
 
     baseCommand: bash
     arguments:
-      - "run_cardamom.sh"
+      - "/workspace/run_cardamom.sh"
 
     inputs:
       input_file:
