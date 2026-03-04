@@ -30,6 +30,7 @@ RUN git clone --depth 1 https://github.com/CARDAMOM-framework/CARDAMOM.git && \
 
 # Copy the wrapper script
 COPY run_cardamom.sh /workspace/run_cardamom.sh
+COPY maap/subset_fluxes.py /workspace/subset_fluxes.py
 RUN chmod +x /workspace/run_cardamom.sh
 
 CMD ["/bin/bash"]
