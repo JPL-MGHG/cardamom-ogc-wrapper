@@ -42,3 +42,5 @@ OUTPUT_FILENAME="output_file_${input_filename}.nc"
 
 conda run --live-stream --name base "${basedir}/CARDAMOM/C/projects/CARDAMOM_MDF/CARDAMOM_MDF.exe" "$input_file" "output/${OUTPUT_PARAM_FILENAME}"
 conda run --live-stream --name base "${basedir}/CARDAMOM/C/projects/CARDAMOM_GENERAL/CARDAMOM_RUN_MODEL.exe" "$input_file" "output/${OUTPUT_PARAM_FILENAME}" "output/${OUTPUT_FILENAME}"
+conda run --live-stream --name base "python ${basedir}/subset_fluxes.py output/${OUTPUT_FILENAME} output/postprocessed_${OUTPUT_FILENAME}"
+rm output/${OUTPUT_FILENAME}
