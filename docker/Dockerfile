@@ -17,6 +17,7 @@ RUN conda install -c conda-forge -n base \
     python=3.10 \
     gcc \
     netcdf4 \
+    xarray \
     hdf5 && \
     conda clean -afy
 
